@@ -16,6 +16,7 @@ class FaceView: UIView {
         bezierPathForFace().stroke()
         bezierPathForLeftEye().stroke()
         bezierPathForRightEye().stroke()
+        bezierPathForSmile().stroke()
     }
     
     private func setStrokeColor()
@@ -37,6 +38,26 @@ class FaceView: UIView {
     private func bezierPathForRightEye() -> UIBezierPath
     {
         return bezierPathCenteredIn(rigthEyeCenter,withRadius: eyeRadius)
+    }
+    
+    private func bezierPathForSmile() -> UIBezierPath
+    {
+        let mouthWidth = faceRadius / Scaling.FaceRadiusToMouthWidthRatio
+        let mouthHeight = faceRadius / Scaling.FaceRadiusToMouthHeightRatio
+        let mouthVerticalOffset = faceRadius / Scaling.FaceRadiusToMouthOffsetRatio
+        
+        let smileHeight = CGFloat(max(min(0.5, 1), -1)) * mouthHeight
+        
+        let start = CGPoint(x: faceCenter.x - mouthWidth / 2, y: faceCenter.y + mouthVerticalOffset)
+        let end = CGPoint(x: start.x + mouthWidth, y: start.y)
+        let cp1 = CGPoint(x: start.x + mouthWidth / 3, y: start.y + smileHeight)
+        let cp2 = CGPoint(x: end.x - mouthWidth / 3, y: cp1.y)
+        
+        let path = UIBezierPath()
+        path.moveToPoint(start)
+        path.addCurveToPoint(end, controlPoint1: cp1, controlPoint2: cp2)
+        path.lineWidth = 3
+        return path
     }
     
     private func bezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
@@ -87,5 +108,8 @@ class FaceView: UIView {
         static let FaceRadiusToEyeRadiusRatio: CGFloat = 10
         static let FaceRadiusToEyeOffsetRatio: CGFloat = 3
         static let FaceRadiusToEyeSeparationRatio: CGFloat = 1.5
+        static let FaceRadiusToMouthWidthRatio: CGFloat = 1
+        static let FaceRadiusToMouthHeightRatio: CGFloat = 3
+        static let FaceRadiusToMouthOffsetRatio: CGFloat = 3
     }
 }
