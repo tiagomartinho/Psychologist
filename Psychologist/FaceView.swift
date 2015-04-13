@@ -9,17 +9,7 @@
 import UIKit
 
 class FaceView: UIView {
-
-    var faceCenter: CGPoint {
-        return convertPoint(center, fromView: superview)
-    }
     
-    var faceRadius: CGFloat {
-        return min(bounds.size.width, bounds.size.height) / 2 * scale
-    }
-    
-    var scale: CGFloat = 0.90
-
     override func drawRect(rect: CGRect)
     {
         setStrokeColor()
@@ -27,11 +17,26 @@ class FaceView: UIView {
         bezierPathForLeftEye().stroke()
         bezierPathForRightEye().stroke()
     }
-
+    
     private func setStrokeColor()
     {
         let color: UIColor = UIColor.blueColor()
         color.set()
+    }
+    
+    private func bezierPathForFace() -> UIBezierPath
+    {
+        return bezierPathCenteredIn(faceCenter,withRadius: faceRadius)
+    }
+    
+    private func bezierPathForLeftEye() -> UIBezierPath
+    {
+        return bezierPathCenteredIn(leftEyeCenter,withRadius: eyeRadius)
+    }
+    
+    private func bezierPathForRightEye() -> UIBezierPath
+    {
+        return bezierPathCenteredIn(rigthEyeCenter,withRadius: eyeRadius)
     }
     
     private func bezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
@@ -46,35 +51,36 @@ class FaceView: UIView {
         return path
     }
     
-    private func bezierPathForFace() -> UIBezierPath
-    {
-        return bezierPathCenteredIn(faceCenter,withRadius: faceRadius)
+    var faceCenter: CGPoint {
+        return convertPoint(center, fromView: superview)
     }
     
-    private func bezierPathForLeftEye() -> UIBezierPath
-    {
-        let eyeRadius = faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
-        let eyeVerticalOffset = faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
-        let eyeHorizontalSeparation = faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
-        
-        var eyeCenter = faceCenter
+    var faceRadius: CGFloat {
+        return min(bounds.size.width, bounds.size.height) / 2 * scale
+    }
+    
+    var scale: CGFloat = 0.90
+    
+    var eyeRadius: CGFloat {
+        return faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
+    }
+    var eyeVerticalOffset: CGFloat {
+        return faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
+    }
+    var eyeHorizontalSeparation: CGFloat {
+        return faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
+    }
+    var leftEyeCenter: CGPoint {
+        var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x -= eyeHorizontalSeparation / 2
-        
-        return bezierPathCenteredIn(eyeCenter,withRadius: eyeRadius)
+        return eyeCenter
     }
-    
-    private func bezierPathForRightEye() -> UIBezierPath
-    {
-        let eyeRadius = faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
-        let eyeVerticalOffset = faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
-        let eyeHorizontalSeparation = faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
-        
-        var eyeCenter = faceCenter
+    var rigthEyeCenter: CGPoint {
+        var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x += eyeHorizontalSeparation / 2
-        
-        return bezierPathCenteredIn(eyeCenter,withRadius: eyeRadius)
+        return eyeCenter
     }
     
     private struct Scaling {
