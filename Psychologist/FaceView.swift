@@ -18,9 +18,21 @@ class FaceView: UIView {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
-    var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
+    var scale: CGFloat = 0.90
 
     override func drawRect(rect: CGRect)
+    {
+        setStrokeColor()
+        bezierPathForFace().stroke()
+    }
+
+    private func setStrokeColor()
+    {
+        let color: UIColor = UIColor.blueColor()
+        color.set()
+    }
+    
+    private func bezierPathForFace() -> UIBezierPath
     {
         let facePath = UIBezierPath(
             arcCenter: faceCenter,
@@ -30,11 +42,6 @@ class FaceView: UIView {
             clockwise: true
         )
         facePath.lineWidth=3
-        
-        let color: UIColor = UIColor.blueColor()
-        color.set()
-        
-        facePath.stroke()
+        return facePath
     }
-
 }
