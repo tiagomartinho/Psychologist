@@ -24,7 +24,8 @@ class FaceView: UIView {
     {
         setStrokeColor()
         bezierPathForFace().stroke()
-        bezierPathForEye().stroke()
+        bezierPathForLeftEye().stroke()
+        bezierPathForRightEye().stroke()
     }
 
     private func setStrokeColor()
@@ -46,11 +47,11 @@ class FaceView: UIView {
         return facePath
     }
     
-    private func bezierPathForEye() -> UIBezierPath
+    private func bezierPathForLeftEye() -> UIBezierPath
     {
-        let eyeRadius = faceRadius / 10
-        let eyeVerticalOffset = faceRadius / 3
-        let eyeHorizontalSeparation = faceRadius / 1.5
+        let eyeRadius = faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
+        let eyeVerticalOffset = faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
+        let eyeHorizontalSeparation = faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
         
         var eyeCenter = faceCenter
         eyeCenter.y -= eyeVerticalOffset
@@ -65,5 +66,32 @@ class FaceView: UIView {
         )
         path.lineWidth = 3
         return path
+    }
+    
+    private func bezierPathForRightEye() -> UIBezierPath
+    {
+        let eyeRadius = faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
+        let eyeVerticalOffset = faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
+        let eyeHorizontalSeparation = faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
+        
+        var eyeCenter = faceCenter
+        eyeCenter.y -= eyeVerticalOffset
+        eyeCenter.x += eyeHorizontalSeparation / 2
+        
+        let path = UIBezierPath(
+            arcCenter: eyeCenter,
+            radius: eyeRadius,
+            startAngle: 0,
+            endAngle: CGFloat(2*M_PI),
+            clockwise: true
+        )
+        path.lineWidth = 3
+        return path
+    }
+    
+    private struct Scaling {
+        static let FaceRadiusToEyeRadiusRatio: CGFloat = 10
+        static let FaceRadiusToEyeOffsetRatio: CGFloat = 3
+        static let FaceRadiusToEyeSeparationRatio: CGFloat = 1.5
     }
 }
