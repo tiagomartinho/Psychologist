@@ -13,6 +13,7 @@
 		EAC508501ADC5BDF00311577 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC5084F1ADC5BDF00311577 /* Images.xcassets */; };
 		EAC508531ADC5BDF00311577 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC508511ADC5BDF00311577 /* LaunchScreen.xib */; };
 		EAC5085F1ADC5BDF00311577 /* PsychologistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC5085E1ADC5BDF00311577 /* PsychologistTests.swift */; };
+		EAC508691ADC5D8500311577 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC508681ADC5D8500311577 /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EAC508581ADC5BDF00311577 /* PsychologistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PsychologistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC5085D1ADC5BDF00311577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC5085E1ADC5BDF00311577 /* PsychologistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsychologistTests.swift; sourceTree = "<group>"; };
+		EAC508681ADC5D8500311577 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				EAC508481ADC5BDF00311577 /* AppDelegate.swift */,
+				EAC508681ADC5D8500311577 /* FaceView.swift */,
 				EAC5084A1ADC5BDF00311577 /* ViewController.swift */,
 				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
-				EAC5084F1ADC5BDF00311577 /* Images.xcassets */,
-				EAC508511ADC5BDF00311577 /* LaunchScreen.xib */,
 				EAC508461ADC5BDF00311577 /* Supporting Files */,
 			);
 			path = Psychologist;
@@ -90,6 +91,8 @@
 		EAC508461ADC5BDF00311577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5084F1ADC5BDF00311577 /* Images.xcassets */,
+				EAC508511ADC5BDF00311577 /* LaunchScreen.xib */,
 				EAC508471ADC5BDF00311577 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -214,6 +217,7 @@
 			files = (
 				EAC5084B1ADC5BDF00311577 /* ViewController.swift in Sources */,
 				EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */,
+				EAC508691ADC5D8500311577 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
