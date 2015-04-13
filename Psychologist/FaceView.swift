@@ -27,17 +27,17 @@ class FaceView: UIView {
     
     private func bezierPathForFace() -> UIBezierPath
     {
-        return bezierPathCenteredIn(faceCenter,withRadius: faceRadius)
+        return circularBezierPathCenteredIn(faceCenter,withRadius: faceRadius)
     }
     
     private func bezierPathForLeftEye() -> UIBezierPath
     {
-        return bezierPathCenteredIn(leftEyeCenter,withRadius: eyeRadius)
+        return circularBezierPathCenteredIn(leftEyeCenter,withRadius: eyeRadius)
     }
     
     private func bezierPathForRightEye() -> UIBezierPath
     {
-        return bezierPathCenteredIn(rigthEyeCenter,withRadius: eyeRadius)
+        return circularBezierPathCenteredIn(rigthEyeCenter,withRadius: eyeRadius)
     }
     
     private func bezierPathForSmile() -> UIBezierPath
@@ -60,7 +60,7 @@ class FaceView: UIView {
         return path
     }
     
-    private func bezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
+    private func circularBezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
         let path = UIBezierPath(
             arcCenter: center,
             radius: withRadius,
