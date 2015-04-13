@@ -34,17 +34,21 @@ class FaceView: UIView {
         color.set()
     }
     
-    private func bezierPathForFace() -> UIBezierPath
-    {
-        let facePath = UIBezierPath(
-            arcCenter: faceCenter,
-            radius: faceRadius,
+    private func bezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
+        let path = UIBezierPath(
+            arcCenter: center,
+            radius: withRadius,
             startAngle: 0,
             endAngle: CGFloat(2*M_PI),
             clockwise: true
         )
-        facePath.lineWidth = 3
-        return facePath
+        path.lineWidth = 3
+        return path
+    }
+    
+    private func bezierPathForFace() -> UIBezierPath
+    {
+        return bezierPathCenteredIn(faceCenter,withRadius: faceRadius)
     }
     
     private func bezierPathForLeftEye() -> UIBezierPath
@@ -57,15 +61,7 @@ class FaceView: UIView {
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x -= eyeHorizontalSeparation / 2
         
-        let path = UIBezierPath(
-            arcCenter: eyeCenter,
-            radius: eyeRadius,
-            startAngle: 0,
-            endAngle: CGFloat(2*M_PI),
-            clockwise: true
-        )
-        path.lineWidth = 3
-        return path
+        return bezierPathCenteredIn(eyeCenter,withRadius: eyeRadius)
     }
     
     private func bezierPathForRightEye() -> UIBezierPath
@@ -78,15 +74,7 @@ class FaceView: UIView {
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x += eyeHorizontalSeparation / 2
         
-        let path = UIBezierPath(
-            arcCenter: eyeCenter,
-            radius: eyeRadius,
-            startAngle: 0,
-            endAngle: CGFloat(2*M_PI),
-            clockwise: true
-        )
-        path.lineWidth = 3
-        return path
+        return bezierPathCenteredIn(eyeCenter,withRadius: eyeRadius)
     }
     
     private struct Scaling {
