@@ -33,14 +33,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-Ph-UmV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-Ph-UmV">
                                 <rect key="frame" x="16" y="72" width="568" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE8-mg-kzb">
-                                <rect key="frame" x="232" y="230" width="137" height="41"/>
+                                <rect key="frame" x="232" y="123" width="137" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="sWD-bw-IeL"/>
                                 </constraints>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxS-yP-bdd">
-                                <rect key="frame" x="232" y="279" width="137" height="41"/>
+                                <rect key="frame" x="232" y="242" width="137" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="FTG-S2-kh1"/>
                                 </constraints>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-7t-xnK">
-                                <rect key="frame" x="232" y="328" width="137" height="41"/>
+                                <rect key="frame" x="232" y="362" width="137" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="BIg-i5-cZH"/>
                                 </constraints>
@@ -94,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAZ-8g-Y6L">
-                                <rect key="frame" x="232" y="377" width="137" height="41"/>
+                                <rect key="frame" x="232" y="481" width="137" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="Vle-Sk-SV2"/>
                                 </constraints>
@@ -119,16 +119,26 @@
                             <constraint firstItem="bwd-7t-xnK" firstAttribute="top" secondItem="ZxS-yP-bdd" secondAttribute="bottom" constant="8" symbolic="YES" id="B2W-wF-gdM"/>
                             <constraint firstItem="NAZ-8g-Y6L" firstAttribute="top" secondItem="bwd-7t-xnK" secondAttribute="bottom" constant="8" symbolic="YES" id="CC4-sC-RZm"/>
                             <constraint firstItem="Yy3-Ph-UmV" firstAttribute="top" secondItem="DPf-Uu-btu" secondAttribute="bottom" constant="8" symbolic="YES" id="H9y-gG-EdX"/>
+                            <constraint firstItem="99Z-eR-gwp" firstAttribute="top" secondItem="NAZ-8g-Y6L" secondAttribute="bottom" constant="8" symbolic="YES" id="Hbt-X1-uhn"/>
                             <constraint firstAttribute="centerX" secondItem="NAZ-8g-Y6L" secondAttribute="centerX" id="ITu-YD-lVJ"/>
                             <constraint firstItem="bwd-7t-xnK" firstAttribute="width" secondItem="NAZ-8g-Y6L" secondAttribute="width" id="JC3-4p-3sM"/>
                             <constraint firstItem="bwd-7t-xnK" firstAttribute="width" secondItem="OE8-mg-kzb" secondAttribute="width" id="Nrw-Mq-Njd"/>
                             <constraint firstItem="Yy3-Ph-UmV" firstAttribute="trailing" secondItem="TDg-Nx-0nO" secondAttribute="trailingMargin" id="OSw-SO-fpX"/>
+                            <constraint firstItem="ZxS-yP-bdd" firstAttribute="height" secondItem="NAZ-8g-Y6L" secondAttribute="height" id="PYU-H7-peT"/>
                             <constraint firstItem="ZxS-yP-bdd" firstAttribute="top" secondItem="OE8-mg-kzb" secondAttribute="bottom" constant="8" symbolic="YES" id="RN0-nE-ElZ"/>
                             <constraint firstItem="Yy3-Ph-UmV" firstAttribute="leading" secondItem="TDg-Nx-0nO" secondAttribute="leadingMargin" id="VuY-DP-Wnk"/>
+                            <constraint firstItem="ZxS-yP-bdd" firstAttribute="height" secondItem="bwd-7t-xnK" secondAttribute="height" id="j2t-xp-rRU"/>
                             <constraint firstAttribute="centerX" secondItem="bwd-7t-xnK" secondAttribute="centerX" id="jKO-0N-rHo"/>
+                            <constraint firstItem="ZxS-yP-bdd" firstAttribute="height" secondItem="OE8-mg-kzb" secondAttribute="height" id="oBR-UU-6x1"/>
                             <constraint firstAttribute="centerX" secondItem="OE8-mg-kzb" secondAttribute="centerX" id="ubN-DS-Qqg"/>
                             <constraint firstAttribute="centerY" secondItem="ZxS-yP-bdd" secondAttribute="centerY" id="wp7-Zh-DTJ"/>
+                            <constraint firstItem="OE8-mg-kzb" firstAttribute="top" secondItem="Yy3-Ph-UmV" secondAttribute="bottom" constant="8" symbolic="YES" id="xV9-m0-bAj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wp7-Zh-DTJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="3ax-DN-uGQ"/>
                 </viewController>
