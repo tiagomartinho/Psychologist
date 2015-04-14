@@ -13,6 +13,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     
     func updateUI() {
         faceView?.setNeedsDisplay()
+        title = "\(happiness)"
     }
     
     let frown: Double = -1.0
@@ -27,6 +28,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         didSet{
             faceView.dataSource = self
             faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "scale:"))
+            title = "\(happiness)"
         }
     }
     
