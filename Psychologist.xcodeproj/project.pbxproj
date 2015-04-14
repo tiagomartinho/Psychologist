@@ -79,7 +79,6 @@
 		EAC508451ADC5BDF00311577 /* Psychologist */ = {
 			isa = PBXGroup;
 			children = (
-				EAC508481ADC5BDF00311577 /* AppDelegate.swift */,
 				EAC508681ADC5D8500311577 /* FaceView.swift */,
 				EAC5084A1ADC5BDF00311577 /* ViewController.swift */,
 				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
@@ -91,6 +90,7 @@
 		EAC508461ADC5BDF00311577 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAC508481ADC5BDF00311577 /* AppDelegate.swift */,
 				EAC5084F1ADC5BDF00311577 /* Images.xcassets */,
 				EAC508511ADC5BDF00311577 /* LaunchScreen.xib */,
 				EAC508471ADC5BDF00311577 /* Info.plist */,
@@ -415,6 +415,7 @@
 				EAC508641ADC5BDF00311577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAC508651ADC5BDF00311577 /* Build configuration list for PBXNativeTarget "PsychologistTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				EAC508671ADC5BDF00311577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

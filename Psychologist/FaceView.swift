@@ -1,11 +1,3 @@
-//
-//  FaceView.swift
-//  Psychologist
-//
-//  Created by Martinho on 13/04/15.
-//  Copyright (c) 2015 Martinho. All rights reserved.
-//
-
 import UIKit
 
 protocol FaceViewDataSource: class {
@@ -26,11 +18,12 @@ class FaceView: UIView {
     
     override func drawRect(rect: CGRect)
     {
+        let smiliness = dataSource?.smilinessForFaceView(self) ?? 0.0
+
         setStrokeColor()
         bezierPathForFace().stroke()
         bezierPathForLeftEye().stroke()
         bezierPathForRightEye().stroke()
-        let smiliness = dataSource?.smilinessForFaceView(self) ?? 0.0
         bezierPathForSmile(smiliness).stroke()
     }
     
