@@ -34,6 +34,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         case .Ended: fallthrough
         case .Changed:
             let translation = gesture.translationInView(faceView)
+            gesture.setTranslation(CGPointZero, inView: faceView)
             println("x:\(translation.x) y:\(translation.y)")
         default: break
         }
