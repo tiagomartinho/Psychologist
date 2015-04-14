@@ -24,7 +24,7 @@
         <!--Psychologist-->
         <scene sceneID="2Ac-9R-K7h">
             <objects>
-                <viewController id="LEy-Qw-rf4" sceneMemberID="viewController">
+                <viewController id="LEy-Qw-rf4" customClass="PsychologistViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DPf-Uu-btu"/>
                         <viewControllerLayoutGuide type="bottom" id="99Z-eR-gwp"/>
