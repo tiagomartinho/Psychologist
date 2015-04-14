@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hwY-Yt-mpk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -18,9 +19,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qah-Qe-Dyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-174"/>
+            <point key="canvasLocation" x="54" y="-218"/>
         </scene>
-        <!--View Controller-->
+        <!--Psychologist-->
         <scene sceneID="2Ac-9R-K7h">
             <objects>
                 <viewController id="LEy-Qw-rf4" sceneMemberID="viewController">
@@ -31,13 +32,109 @@
                     <view key="view" contentMode="scaleToFill" id="TDg-Nx-0nO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-Ph-UmV">
+                                <rect key="frame" x="16" y="72" width="568" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE8-mg-kzb">
+                                <rect key="frame" x="232" y="230" width="137" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="sWD-bw-IeL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Golden Bear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sWD-bw-IeL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="4db-vE-rFc" kind="showDetail" identifier="sad" id="k9s-gD-7bn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxS-yP-bdd">
+                                <rect key="frame" x="232" y="279" width="137" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="FTG-S2-kh1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Dancing Tree">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FTG-S2-kh1"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="4db-vE-rFc" kind="showDetail" identifier="happy" id="1Mx-v4-nr1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-7t-xnK">
+                                <rect key="frame" x="232" y="328" width="137" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="BIg-i5-cZH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Buckeye">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BIg-i5-cZH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="4db-vE-rFc" kind="showDetail" identifier="meh" id="JGX-ZL-qmM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAZ-8g-Y6L">
+                                <rect key="frame" x="232" y="377" width="137" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="Vle-Sk-SV2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Nothing!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vle-Sk-SV2"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="4db-vE-rFc" kind="showDetail" identifier="nothing" id="3TE-I6-a2Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ZxS-yP-bdd" secondAttribute="centerX" id="3tD-5A-E8m"/>
+                            <constraint firstItem="bwd-7t-xnK" firstAttribute="width" secondItem="ZxS-yP-bdd" secondAttribute="width" id="8la-1K-mxM"/>
+                            <constraint firstItem="bwd-7t-xnK" firstAttribute="top" secondItem="ZxS-yP-bdd" secondAttribute="bottom" constant="8" symbolic="YES" id="B2W-wF-gdM"/>
+                            <constraint firstItem="NAZ-8g-Y6L" firstAttribute="top" secondItem="bwd-7t-xnK" secondAttribute="bottom" constant="8" symbolic="YES" id="CC4-sC-RZm"/>
+                            <constraint firstItem="Yy3-Ph-UmV" firstAttribute="top" secondItem="DPf-Uu-btu" secondAttribute="bottom" constant="8" symbolic="YES" id="H9y-gG-EdX"/>
+                            <constraint firstAttribute="centerX" secondItem="NAZ-8g-Y6L" secondAttribute="centerX" id="ITu-YD-lVJ"/>
+                            <constraint firstItem="bwd-7t-xnK" firstAttribute="width" secondItem="NAZ-8g-Y6L" secondAttribute="width" id="JC3-4p-3sM"/>
+                            <constraint firstItem="bwd-7t-xnK" firstAttribute="width" secondItem="OE8-mg-kzb" secondAttribute="width" id="Nrw-Mq-Njd"/>
+                            <constraint firstItem="Yy3-Ph-UmV" firstAttribute="trailing" secondItem="TDg-Nx-0nO" secondAttribute="trailingMargin" id="OSw-SO-fpX"/>
+                            <constraint firstItem="ZxS-yP-bdd" firstAttribute="top" secondItem="OE8-mg-kzb" secondAttribute="bottom" constant="8" symbolic="YES" id="RN0-nE-ElZ"/>
+                            <constraint firstItem="Yy3-Ph-UmV" firstAttribute="leading" secondItem="TDg-Nx-0nO" secondAttribute="leadingMargin" id="VuY-DP-Wnk"/>
+                            <constraint firstAttribute="centerX" secondItem="bwd-7t-xnK" secondAttribute="centerX" id="jKO-0N-rHo"/>
+                            <constraint firstAttribute="centerX" secondItem="OE8-mg-kzb" secondAttribute="centerX" id="ubN-DS-Qqg"/>
+                            <constraint firstAttribute="centerY" secondItem="ZxS-yP-bdd" secondAttribute="centerY" id="wp7-Zh-DTJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3ax-DN-uGQ"/>
+                    <navigationItem key="navigationItem" title="Psychologist" id="3ax-DN-uGQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUK-YS-Qmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-174"/>
+            <point key="canvasLocation" x="820" y="-218"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="g9l-Cc-NBZ">
@@ -92,7 +189,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="820" y="520"/>
+            <point key="canvasLocation" x="820" y="584"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eHY-ma-ZBG">
@@ -110,7 +207,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwe-Lf-BRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="520"/>
+            <point key="canvasLocation" x="54" y="584"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3TE-I6-a2Q"/>
+    </inferredMetricsTieBreakers>
 </document>
