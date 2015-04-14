@@ -79,34 +79,34 @@ class FaceView: UIView {
         return path
     }
     
-    var faceCenter: CGPoint {
+    private var faceCenter: CGPoint {
         return convertPoint(center, fromView: superview)
     }
     
-    var faceRadius: CGFloat {
+    private var faceRadius: CGFloat {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
-    var eyeRadius: CGFloat {
+   private var eyeRadius: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
     }
     
-    var eyeVerticalOffset: CGFloat {
+   private var eyeVerticalOffset: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
     }
     
-    var eyeHorizontalSeparation: CGFloat {
+    private var eyeHorizontalSeparation: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
     }
     
-    var leftEyeCenter: CGPoint {
+    private var leftEyeCenter: CGPoint {
         var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x -= eyeHorizontalSeparation / 2
         return eyeCenter
     }
     
-    var rigthEyeCenter: CGPoint {
+    private var rigthEyeCenter: CGPoint {
         var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x += eyeHorizontalSeparation / 2
