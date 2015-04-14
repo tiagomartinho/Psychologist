@@ -8,7 +8,15 @@
 
 import UIKit
 
+@IBDesignable
 class FaceView: UIView {
+    
+    @IBInspectable
+    var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var color: UIColor = UIColor.blueColor() { didSet { setNeedsDisplay() } }
+    @IBInspectable
+    var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
     
     override func drawRect(rect: CGRect)
     {
@@ -21,7 +29,6 @@ class FaceView: UIView {
     
     private func setStrokeColor()
     {
-        let color: UIColor = UIColor.blueColor()
         color.set()
     }
     
@@ -56,19 +63,19 @@ class FaceView: UIView {
         let path = UIBezierPath()
         path.moveToPoint(start)
         path.addCurveToPoint(end, controlPoint1: cp1, controlPoint2: cp2)
-        path.lineWidth = 3
+        path.lineWidth = lineWidth
         return path
     }
     
-    private func circularBezierPathCenteredIn(center: CGPoint, withRadius: CGFloat) -> UIBezierPath{
+    private func circularBezierPathCenteredIn(center: CGPoint, withRadius radius: CGFloat) -> UIBezierPath{
         let path = UIBezierPath(
             arcCenter: center,
-            radius: withRadius,
+            radius: radius,
             startAngle: 0,
             endAngle: CGFloat(2*M_PI),
             clockwise: true
         )
-        path.lineWidth = 3
+        path.lineWidth = lineWidth
         return path
     }
     
@@ -80,23 +87,25 @@ class FaceView: UIView {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
     
-    var scale: CGFloat = 0.90
-    
     var eyeRadius: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeRadiusRatio
     }
+    
     var eyeVerticalOffset: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeOffsetRatio
     }
+    
     var eyeHorizontalSeparation: CGFloat {
         return faceRadius / Scaling.FaceRadiusToEyeSeparationRatio
     }
+    
     var leftEyeCenter: CGPoint {
         var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
         eyeCenter.x -= eyeHorizontalSeparation / 2
         return eyeCenter
     }
+    
     var rigthEyeCenter: CGPoint {
         var eyeCenter=faceCenter
         eyeCenter.y -= eyeVerticalOffset
