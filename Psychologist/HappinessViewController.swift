@@ -35,7 +35,10 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         case .Changed:
             let translation = gesture.translationInView(faceView)
             gesture.setTranslation(CGPointZero, inView: faceView)
-            happiness += -Int(translation.y)/5
+            let happinessChange = -Int(translation.y / 4)
+            if happinessChange != 0 {
+                happiness += happinessChange
+            }
         default: break
         }
     }
