@@ -26,6 +26,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     @IBOutlet var faceView: FaceView! {
         didSet{
             faceView.dataSource = self
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "scale:"))
         }
     }
     

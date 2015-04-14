@@ -9,6 +9,12 @@ class FaceView: UIView {
     
     weak var dataSource: FaceViewDataSource?
 
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            println(gesture.scale)
+        }
+    }
+    
     @IBInspectable
     var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
     @IBInspectable
