@@ -1,6 +1,6 @@
 import UIKit
 
-class HappinessViewController: UIViewController
+class HappinessViewController: UIViewController, FaceViewDataSource
 {
     let verySad: Int = 0
     let ecstatic: Int = 100
@@ -10,5 +10,12 @@ class HappinessViewController: UIViewController
         }
     }
     
+    let frown: Double = -1.0
+    let smile: Double = +1.0
+    var m:Double { return (frown-smile)/Double(ecstatic-verySad) }
+    var b:Double { return frown - Double(verySad) * m}
+    func smilinessForFaceView(sender: FaceView) -> Double? {
+        return m*Double(happiness)+b
+    }
 }
 
