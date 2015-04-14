@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC508481ADC5BDF00311577 /* AppDelegate.swift */; };
-		EAC5084B1ADC5BDF00311577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC5084A1ADC5BDF00311577 /* ViewController.swift */; };
+		EAC5084B1ADC5BDF00311577 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */; };
 		EAC5084E1ADC5BDF00311577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC5084C1ADC5BDF00311577 /* Main.storyboard */; };
 		EAC508501ADC5BDF00311577 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC5084F1ADC5BDF00311577 /* Images.xcassets */; };
 		EAC508531ADC5BDF00311577 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC508511ADC5BDF00311577 /* LaunchScreen.xib */; };
@@ -30,7 +30,7 @@
 		EAC508431ADC5BDF00311577 /* Psychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC508471ADC5BDF00311577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC508481ADC5BDF00311577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EAC5084A1ADC5BDF00311577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		EAC5084D1ADC5BDF00311577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAC5084F1ADC5BDF00311577 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAC508521ADC5BDF00311577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				EAC508681ADC5D8500311577 /* FaceView.swift */,
-				EAC5084A1ADC5BDF00311577 /* ViewController.swift */,
+				EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */,
 				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
 				EAC508461ADC5BDF00311577 /* Supporting Files */,
 			);
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC5084B1ADC5BDF00311577 /* ViewController.swift in Sources */,
+				EAC5084B1ADC5BDF00311577 /* HappinessViewController.swift in Sources */,
 				EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */,
 				EAC508691ADC5D8500311577 /* FaceView.swift in Sources */,
 			);
