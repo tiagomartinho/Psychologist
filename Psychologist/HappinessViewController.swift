@@ -12,7 +12,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     }
     
     func updateUI() {
-        faceView.setNeedsDisplay()
+        faceView?.setNeedsDisplay()
     }
     
     let frown: Double = -1.0
