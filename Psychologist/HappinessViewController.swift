@@ -17,5 +17,10 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     func smilinessForFaceView(sender: FaceView) -> Double? {
         return m*Double(happiness)+b
     }
+    
+    @IBOutlet var faceView: FaceView! {
+        didSet{
+            faceView.dataSource = self
+        }
+    }
 }
-
