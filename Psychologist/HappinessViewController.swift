@@ -28,4 +28,14 @@ class HappinessViewController: UIViewController, FaceViewDataSource
             faceView.dataSource = self
         }
     }
+    
+    @IBAction func changeHapiness(gesture: UIPanGestureRecognizer) {
+        switch gesture.state {
+        case .Ended: fallthrough
+        case .Changed:
+            let translation = gesture.translationInView(faceView)
+            println("x:\(translation.x) y:\(translation.y)")
+        default: break
+        }
+    }
 }

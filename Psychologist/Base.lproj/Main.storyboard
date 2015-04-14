@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="color">
                                 <color key="value" red="0.69929392459999995" green="0.52143896999999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,12 +28,20 @@
                                 <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="M6J-VQ-SI3" appends="YES" id="gBg-bH-w90"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="faceView" destination="8bC-Xf-vdC" id="XnS-c6-lYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="M6J-VQ-SI3">
+                    <connections>
+                        <action selector="changeHapiness:" destination="BYZ-38-t0r" id="lqe-R5-RQ9"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
