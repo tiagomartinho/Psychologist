@@ -11,7 +11,8 @@ class FaceView: UIView {
 
     func scale(gesture: UIPinchGestureRecognizer) {
         if gesture.state == .Changed {
-            println(gesture.scale)
+            scale *= gesture.scale
+            gesture.scale = 1
         }
     }
     
