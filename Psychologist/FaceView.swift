@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol FaceViewDataSource: class {
+    func smilinessForFaceView(sender: FaceView) -> Double?
+}
+
 @IBDesignable
 class FaceView: UIView {
     
+    weak var dataSource: FaceViewDataSource?
+
     @IBInspectable
     var lineWidth: CGFloat = 3 { didSet { setNeedsDisplay() } }
     @IBInspectable
@@ -24,7 +30,8 @@ class FaceView: UIView {
         bezierPathForFace().stroke()
         bezierPathForLeftEye().stroke()
         bezierPathForRightEye().stroke()
-        bezierPathForSmile(-0.5).stroke()
+        let smiliness = dataSource?.smilinessForFaceView(self) ?? 0.0
+        bezierPathForSmile(smiliness).stroke()
     }
     
     private func setStrokeColor()
