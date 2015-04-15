@@ -85,12 +85,12 @@
 		EAC508451ADC5BDF00311577 /* Psychologist */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
+				EAC508681ADC5D8500311577 /* FaceView.swift */,
 				EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */,
 				EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */,
 				EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */,
 				EA16D0041ADEF2F00077E086 /* TextViewController.swift */,
-				EAC508681ADC5D8500311577 /* FaceView.swift */,
-				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
 				EAC508461ADC5BDF00311577 /* Supporting Files */,
 			);
 			path = Psychologist;
