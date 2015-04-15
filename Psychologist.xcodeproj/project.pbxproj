@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA5273C01ADDAFC300DD9244 /* PsychologistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */; };
+		EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */; };
 		EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC508481ADC5BDF00311577 /* AppDelegate.swift */; };
 		EAC5084B1ADC5BDF00311577 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */; };
 		EAC5084E1ADC5BDF00311577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC5084C1ADC5BDF00311577 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsychologistViewController.swift; sourceTree = "<group>"; };
+		EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 		EAC508431ADC5BDF00311577 /* Psychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC508471ADC5BDF00311577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC508481ADC5BDF00311577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */,
 				EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */,
+				EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */,
 				EAC508681ADC5D8500311577 /* FaceView.swift */,
 				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
 				EAC508461ADC5BDF00311577 /* Supporting Files */,
@@ -220,6 +223,7 @@
 			files = (
 				EA5273C01ADDAFC300DD9244 /* PsychologistViewController.swift in Sources */,
 				EAC5084B1ADC5BDF00311577 /* HappinessViewController.swift in Sources */,
+				EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */,
 				EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */,
 				EAC508691ADC5D8500311577 /* FaceView.swift in Sources */,
 			);
