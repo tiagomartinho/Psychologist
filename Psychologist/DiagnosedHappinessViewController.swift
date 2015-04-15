@@ -2,6 +2,14 @@ import UIKit
 
 class DiagnosedHappinessViewController : HappinessViewController,UIPopoverPresentationControllerDelegate
 {
+    var diagnosticHistory = [Int]()
+    
+    override var happiness: Int {
+        didSet {
+            diagnosticHistory += [happiness]
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
             switch identifier {
@@ -10,7 +18,7 @@ class DiagnosedHappinessViewController : HappinessViewController,UIPopoverPresen
                     if let ppc = tvc.popoverPresentationController {
                         ppc.delegate = self
                     }
-                    tvc.text = "diagnosticHistory"
+                    tvc.text = "\(diagnosticHistory)"
                 }
             default: break
             }
