@@ -237,6 +237,9 @@
                             <constraint firstItem="xk0-9i-8Vj" firstAttribute="leading" secondItem="GTe-Tf-zxi" secondAttribute="leading" id="drf-bC-6Ex"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="xk0-9i-8Vj" id="hXs-PS-FDB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to2-rj-1IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
