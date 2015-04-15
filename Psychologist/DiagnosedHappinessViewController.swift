@@ -2,13 +2,19 @@ import UIKit
 
 class DiagnosedHappinessViewController : HappinessViewController,UIPopoverPresentationControllerDelegate
 {
-    var diagnosticHistory = [Int]()
-    
     override var happiness: Int {
         didSet {
             diagnosticHistory += [happiness]
         }
     }
+    
+    var diagnosticHistory: [Int] {
+        get { return defaults.objectForKey(DefaultsKey) as? [Int] ?? [] }
+        set { defaults.setObject(newValue, forKey: DefaultsKey) }
+    }
+    
+    private let defaults = NSUserDefaults.standardUserDefaults()
+    private let DefaultsKey = "DiagnosedHappinessViewController.History"
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
