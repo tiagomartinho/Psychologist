@@ -36,7 +36,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" text="What do you see in your dreams?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-Ph-UmV">
                                 <rect key="frame" x="16" y="72" width="568" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE8-mg-kzb">
@@ -174,20 +174,28 @@
                         <gestureRecognizers/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                <color key="value" red="0.69929392459999995" green="0.52143896999999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.22352941179999999" green="0.35686274509999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="scale">
-                                <real key="value" value="0.5"/>
+                                <real key="value" value="0.69999999999999996"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                <real key="value" value="6"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="M6J-VQ-SI3" appends="YES" id="gBg-bH-w90"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="x3R-hA-duE"/>
+                    <navigationItem key="navigationItem" id="x3R-hA-duE">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="D2o-59-TeR">
+                            <connections>
+                                <segue destination="aBF-6f-Ee1" kind="popoverPresentation" popoverAnchorBarButtonItem="D2o-59-TeR" id="cM2-bf-e5R">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="8bC-Xf-vdC" id="XnS-c6-lYA"/>
                     </connections>
@@ -200,6 +208,24 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="820" y="584"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="i8h-kT-crB">
+            <objects>
+                <viewController id="aBF-6f-Ee1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZAs-Ak-3do"/>
+                        <viewControllerLayoutGuide type="bottom" id="9RT-9t-9cw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GTe-Tf-zxi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="to2-rj-1IU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="584"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eHY-ma-ZBG">
