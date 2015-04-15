@@ -190,7 +190,7 @@
                     <navigationItem key="navigationItem" id="x3R-hA-duE">
                         <barButtonItem key="rightBarButtonItem" title="History" id="D2o-59-TeR">
                             <connections>
-                                <segue destination="aBF-6f-Ee1" kind="popoverPresentation" popoverAnchorBarButtonItem="D2o-59-TeR" id="cM2-bf-e5R">
+                                <segue destination="aBF-6f-Ee1" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="D2o-59-TeR" id="cM2-bf-e5R">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
