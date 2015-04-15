@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA16D0051ADEF2F00077E086 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D0041ADEF2F00077E086 /* TextViewController.swift */; };
 		EA5273C01ADDAFC300DD9244 /* PsychologistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */; };
 		EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */; };
 		EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC508481ADC5BDF00311577 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA16D0041ADEF2F00077E086 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsychologistViewController.swift; sourceTree = "<group>"; };
 		EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 		EAC508431ADC5BDF00311577 /* Psychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */,
 				EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */,
 				EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */,
+				EA16D0041ADEF2F00077E086 /* TextViewController.swift */,
 				EAC508681ADC5D8500311577 /* FaceView.swift */,
 				EAC5084C1ADC5BDF00311577 /* Main.storyboard */,
 				EAC508461ADC5BDF00311577 /* Supporting Files */,
@@ -226,6 +229,7 @@
 				EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */,
 				EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */,
 				EAC508691ADC5D8500311577 /* FaceView.swift in Sources */,
+				EA16D0051ADEF2F00077E086 /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

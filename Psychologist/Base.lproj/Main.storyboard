@@ -209,10 +209,10 @@
             </objects>
             <point key="canvasLocation" x="820" y="584"/>
         </scene>
-        <!--View Controller-->
+        <!--Text View Controller-->
         <scene sceneID="i8h-kT-crB">
             <objects>
-                <viewController id="aBF-6f-Ee1" sceneMemberID="viewController">
+                <viewController id="aBF-6f-Ee1" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZAs-Ak-3do"/>
                         <viewControllerLayoutGuide type="bottom" id="9RT-9t-9cw"/>
