@@ -10,6 +10,7 @@
 		EA16D0051ADEF2F00077E086 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D0041ADEF2F00077E086 /* TextViewController.swift */; };
 		EA16D0081ADEFA320077E086 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D0071ADEFA320077E086 /* UIViewControllerExtensions.swift */; };
 		EA16D00A1ADEFB0F0077E086 /* PsychologistViewControllerVCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D0091ADEFB0F0077E086 /* PsychologistViewControllerVCL.swift */; };
+		EA16D00C1ADEFBB90077E086 /* DiagnosedHappinessViewControllerVCL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D00B1ADEFBB90077E086 /* DiagnosedHappinessViewControllerVCL.swift */; };
 		EA5273C01ADDAFC300DD9244 /* PsychologistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */; };
 		EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */; };
 		EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC508481ADC5BDF00311577 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		EA16D0041ADEF2F00077E086 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		EA16D0071ADEFA320077E086 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		EA16D0091ADEFB0F0077E086 /* PsychologistViewControllerVCL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsychologistViewControllerVCL.swift; sourceTree = "<group>"; };
+		EA16D00B1ADEFBB90077E086 /* DiagnosedHappinessViewControllerVCL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewControllerVCL.swift; sourceTree = "<group>"; };
 		EA5273BF1ADDAFC300DD9244 /* PsychologistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsychologistViewController.swift; sourceTree = "<group>"; };
 		EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 		EAC508431ADC5BDF00311577 /* Psychologist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Psychologist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 				EA16D0091ADEFB0F0077E086 /* PsychologistViewControllerVCL.swift */,
 				EAC5084A1ADC5BDF00311577 /* HappinessViewController.swift */,
 				EAA9B4D61ADEF193008A7FDF /* DiagnosedHappinessViewController.swift */,
+				EA16D00B1ADEFBB90077E086 /* DiagnosedHappinessViewControllerVCL.swift */,
 				EA16D0041ADEF2F00077E086 /* TextViewController.swift */,
 			);
 			name = ViewControllers;
@@ -240,6 +243,7 @@
 			files = (
 				EA5273C01ADDAFC300DD9244 /* PsychologistViewController.swift in Sources */,
 				EAC5084B1ADC5BDF00311577 /* HappinessViewController.swift in Sources */,
+				EA16D00C1ADEFBB90077E086 /* DiagnosedHappinessViewControllerVCL.swift in Sources */,
 				EA16D00A1ADEFB0F0077E086 /* PsychologistViewControllerVCL.swift in Sources */,
 				EAA9B4D71ADEF193008A7FDF /* DiagnosedHappinessViewController.swift in Sources */,
 				EAC508491ADC5BDF00311577 /* AppDelegate.swift in Sources */,

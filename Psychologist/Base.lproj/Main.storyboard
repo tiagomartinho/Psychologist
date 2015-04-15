@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="-766" y="156"/>
         </scene>
-        <!--Diagnosed Happiness View Controller-->
+        <!--Diagnosed Happiness View ControllerVCL-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DiagnosedHappinessViewControllerVCL" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
